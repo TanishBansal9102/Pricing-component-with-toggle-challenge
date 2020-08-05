@@ -1,0 +1,164 @@
+%card-unselected {
+  @include set-background(#fff);
+  height: 343px;
+  width: 280px;
+  border-radius: 10px;
+  position: relative;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $font-color;
+
+  .heading {
+    position: absolute;
+    top: 20px;
+  }
+
+  .price {
+  position: absolute;
+  top: 60px;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+  height: 39px;
+}
+
+.storage {
+  position: absolute;
+  top: 140px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(240, 6%, 93%);
+  padding: 10px;
+}
+
+.users-allowed {
+  position: absolute;
+  top: 175px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(240, 6%, 93%);
+  padding: 10px;
+}
+
+.share-data {
+  position: absolute;
+  top: 210px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(240, 6%, 93%);
+  border-bottom: solid 1px hsl(240, 6%, 93%);
+  padding: 10px;
+}
+
+a {
+  position: absolute;
+  top: 280px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+}
+}
+
+%card-selected {
+  @include set-background($background);
+  width: 280px;
+  border-radius: 10px;
+  top: 40px;
+  height: 375px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  .heading {
+    position: absolute;
+    top: 36px;
+  }
+
+  .price {
+  position: absolute;
+  top: 76px;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+  height: 39px;
+}
+
+.storage {
+  position: absolute;
+  top: 156px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(236, 72%, 79%);
+  padding: 10px;
+}
+
+.users-allowed {
+  position: absolute;
+  top: 191px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(236, 72%, 79%);
+  padding: 10px;
+}
+
+.share-data {
+  position: absolute;
+  top: 226px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px hsl(236, 72%, 79%);
+  border-bottom: solid 1px hsl(236, 72%, 79%);
+  padding: 10px;
+}
+
+a {
+  position: absolute;
+  top: 296px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+}
+}
+
+
+
+.basic {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  @extend %card-unselected;
+}
+
+.professional {
+ @extend %card-selected;
+}
+
+.master {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  @extend %card-unselected;
+}
+
+.unselected-card {
+  @extend %card-unselected;
+}
+
+.selected-card {
+  @extend %card-selected;
+}
+ 

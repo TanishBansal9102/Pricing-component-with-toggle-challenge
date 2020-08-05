@@ -1,0 +1,22 @@
+@font-face {
+  font-family: Monserrat-Bold;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+$primary-color: hsl(237, 63%, 64%);
+$secondary-color: hsl(235, 33%, 62%);
+$font-color: hsl(233, 13%, 49%);
+$font-stack: Monserrat-Bold, sans-serif;
+$background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+
+
+@mixin set-background ($color) {
+  background: $color;
+  @if (background: $background) {
+    color: #fff;
+  }@else {
+    color: $font-color;
+  }
+}

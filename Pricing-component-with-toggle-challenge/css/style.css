@@ -1,0 +1,292 @@
+@font-face {
+  font-family: Monserrat-Bold;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 15px Monserrat-Bold, sans-serif;
+}
+
+body {
+  background-color: #f6f6fe;
+}
+
+img {
+  position: absolute;
+}
+
+.bg-top {
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.bg-bottom {
+  left: 0;
+  bottom: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #6d708d;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.annually,
+.toggle-button,
+.monthly {
+  position: relative;
+  top: 120px;
+  display: inline-block;
+  left: 0;
+  padding: 1rem;
+  font-size: 12px;
+  color: #b3b5c6;
+}
+
+.toggle-button {
+  width: 40px;
+  height: 24px;
+  padding: unset;
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  border-radius: 24px;
+}
+
+#toggler {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cards {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle-left {
+  animation: left-right 250ms linear forwards;
+}
+
+.toggle-right {
+  animation: right-left 250ms linear backwards;
+}
+
+@keyframes left-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(16px);
+  }
+}
+
+@keyframes right-left {
+  from {
+    transform: translateX(16px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.basic, .master, .unselected-card {
+  background: #fff;
+  color: #fff;
+  height: 343px;
+  width: 280px;
+  border-radius: 10px;
+  position: relative;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d708d;
+}
+
+.basic .heading, .master .heading, .unselected-card .heading {
+  position: absolute;
+  top: 20px;
+}
+
+.basic .price, .master .price, .unselected-card .price {
+  position: absolute;
+  top: 60px;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+  height: 39px;
+}
+
+.basic .storage, .master .storage, .unselected-card .storage {
+  position: absolute;
+  top: 140px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #ececee;
+  padding: 10px;
+}
+
+.basic .users-allowed, .master .users-allowed, .unselected-card .users-allowed {
+  position: absolute;
+  top: 175px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #ececee;
+  padding: 10px;
+}
+
+.basic .share-data, .master .share-data, .unselected-card .share-data {
+  position: absolute;
+  top: 210px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #ececee;
+  border-bottom: solid 1px #ececee;
+  padding: 10px;
+}
+
+.basic a, .master a, .unselected-card a {
+  position: absolute;
+  top: 280px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+}
+
+.professional, .selected-card {
+  background: linear-gradient(#a3a8f0, #696fdd);
+  color: #fff;
+  width: 280px;
+  border-radius: 10px;
+  top: 40px;
+  height: 375px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.professional .heading, .selected-card .heading {
+  position: absolute;
+  top: 36px;
+}
+
+.professional .price, .selected-card .price {
+  position: absolute;
+  top: 76px;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+  height: 39px;
+}
+
+.professional .storage, .selected-card .storage {
+  position: absolute;
+  top: 156px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #a3a8f0;
+  padding: 10px;
+}
+
+.professional .users-allowed, .selected-card .users-allowed {
+  position: absolute;
+  top: 191px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #a3a8f0;
+  padding: 10px;
+}
+
+.professional .share-data, .selected-card .share-data {
+  position: absolute;
+  top: 226px;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+  border-top: solid 1px #a3a8f0;
+  border-bottom: solid 1px #a3a8f0;
+  padding: 10px;
+}
+
+.professional a, .selected-card a {
+  position: absolute;
+  top: 296px;
+  width: 90%;
+  text-align: center;
+  height: 39px;
+}
+
+.basic {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.master {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-primary, .btn-secondary {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  background: transparent;
+  color: #6d708d;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid #6d708d;
+}
+
+.btn-secondary {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    display: grid;
+    grid-gap: 15px;
+    top: 100px;
+  }
+  .bg-bottom {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
